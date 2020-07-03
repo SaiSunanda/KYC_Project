@@ -1,0 +1,10 @@
+miner.start()
+miner.stop()
+miner.start()
+eexit
+miner.stop()
+miner.start()
+miner.stop()
+geth --datadir ./datadir --networkid 2019 --rpc --rpcport 30303 --allow-insecure-unlock
+miner.start()
+miner.stop()

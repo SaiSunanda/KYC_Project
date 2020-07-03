@@ -1,0 +1,34 @@
+This file contains the instructions for starting the Blockchain and deploying the smart contract on top of it
+--------------------------------------------------------------------------------------------------------------
+
+1. $ truffle compile  (from the KYC-SC folder)
+
+2. $ geth --datadir ./datadir --networkid 2019 --rpc --rpcport 30306 --allow-insecure-unlock console (from the KYC-Blockchain folder)
+
+3. Then in the geth console > personal.unlockAccount(‘0xb4d4a57ef7be2dd629ad9c8c4e6f9049126568cc’, ‘account1’, 0)
+
+4. Then > miner.start()
+
+5. When it have started mining - $truffle migrate --network geth (from the KYC-SC folder)
+
+6. Get inside the truffle console - $truffle console --network geth 
+
+7. To get the instance of the smart contract that you have deployed on the blockchain you need to write the following JavaScript statement inside the truffle console 
+
+    let kyc = await KYCContract.deployed()
+
+When this statement is executed, you will have the value of the smart contract available inside this kyc variable.
+
+8. type kyc. and press Tab twice you will see the various methods that are available to this instance of the smart contract.
+
+9. Access the functions similarly
+
+
+
+For reference
+-------------
+Account address : 0xb4d4a57ef7be2dd629ad9c8c4e6f9049126568cc   Password : account1
+Account address : 0x209b11e5967223e830392f09dc8210deb8f3faf7   Password : account2
+
+
+
